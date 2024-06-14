@@ -62,6 +62,7 @@ function changeColorWrong(event) {
     let heart = document.getElementById("heart" + (wrongCount + 1));
     if (wrongGuess <= 1) {
     event.target.style.backgroundColor="#B1E5E7";
+    event.target.removeEventListener('click',changeColorWrong);
     wrongGuess++;
     }
     else
